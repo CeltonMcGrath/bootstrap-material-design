@@ -23,6 +23,7 @@
   // flat removes bg, add color variations to text
   @include bmd-flat-button-color();
 
+  @include bmd-flat-flat-button-color();
   // fab and raised
   //  - colored, add their text and bg
   //  - hover color contrasted

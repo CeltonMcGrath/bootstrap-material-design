@@ -11,6 +11,9 @@ $gray-dark: rgba($black, 0.87) !default; // used for text color - others use gre
 
 $bmd-font-weight-base: 400;
 
+$font-size-base: .75rem;
+$bmd-btn-font-size: .75rem;
+
 // wondering if any of these could still be refactored out, but are definitely in use.
 $bmd-inverse: rgba($white, 1) !default;
 $bmd-inverse-light: rgba($white, 0.84) !default;
@@ -22,7 +25,7 @@ $bmd-label-color-inner-focus: $gray !default; // e.g. radio label or text-muted 
 // Bootstrap Material Design default colors (these can be override by user)
 $theme-colors: () !default;
 $theme-colors: map-merge((
-  primary: $teal,
+  primary: #1d90bb,
   success: $green,
   info: $light-blue,
   warning: $deep-orange,
@@ -53,8 +56,8 @@ $theme-colors: map-merge((
 // import their vars after customization for use below
 $enable-flex: true; // fully adopt flexbox layouts
 $enable-shadows: true; // enable shadows, set to false to turn off shadows
-@import "~bootstrap/scss/functions"; // from bootstrap node_module
-@import "~bootstrap/scss/variables"; // from bootstrap node_module
+@import "bootstrap-npm/scss/functions"; // from bootstrap node_module
+@import "bootstrap-npm/scss/variables"; // from bootstrap node_module
 
 //
 @import "variables/layout";
@@ -108,7 +111,7 @@ $text-disabled: #a8a8a8 !default;
 $background-disabled: #eaeaea !default;
 
 // Checkboxes
-$bmd-checkbox-size: 1.25rem !default;
+$bmd-checkbox-size: 1rem !default;
 $bmd-checkbox-animation-ripple: 500ms !default;
 $bmd-checkbox-animation-check: 0.3s !default;
 $bmd-checkbox-checked-color: theme-color(primary) !default;

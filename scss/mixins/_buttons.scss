@@ -99,15 +99,29 @@
   }
 }
 
-@mixin bmd-flat-button-color() {
-  @include bmd-flat-button-variant($bmd-btn-color);
 
-  // flat bg with text color variations
+@mixin bmd-flat-flat-button-color() {
+   @include bmd-flat-button-variant($bmd-btn-color);
+
+   // flat bg with text color variations
+   @each $color, $value in $theme-colors {
+     &.btn-flat-#{$color} {
+      @include bmd-flat-button-variant($value);
+     }
+   }
+
+}
+
+
+
+
+@mixin bmd-flat-button-color() {
   @each $color, $value in $theme-colors {
     &.btn-#{$color} {
-      @include bmd-flat-button-variant($value);
+      @include bmd-raised-button-variant(#fff, $value, $value);
     }
   }
+
 }
 
 @mixin bmd-outline-border() {
